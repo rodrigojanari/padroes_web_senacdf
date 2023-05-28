@@ -1,5 +1,5 @@
 # padroes_web_senacdf
-1º Semestre 2023 - Senac DF - Padrões Web | Ciência de Dados e Análise e Desenvolvimento de Sistemas
+1º Semestre 2023 - Senac DF - Padrões Web | Ciência de Dados | Análise e Desenvolvimento de Sistemas
 
 Cláudia Efigênia Pereira Silva – CD
 Emerson de Souza Dantas - ADS
