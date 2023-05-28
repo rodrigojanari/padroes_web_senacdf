@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1 id="cab1">Exemplo</h1>
+    <script>
+        let nome = prompt("Qual o seu nome?");
+        let n1 = parseFloat(prompt("Insira a nota do primeiro bimestre:"));
+        let n2 = parseFloat(prompt("Insira a nota do segundo bimestre:"));
+        let media = (n1 + n2) / 2
+        
+        let x = document.getElementById("cab1");
+        /* x.innerHTML = "<h2>Olá</h2>" + nome + "<h3>Tudo bem?</h3>";*/
+        
+        if (media >= 6) {
+            /*alert("Aprovado!");*/
+            x.innerHTML = "<h1> Aluno: " + nome + "</h1><h2> média: " + media + "<h3 style=color:blue > Você foi aprovado. Parabéns!</h3>";
+        } else {
+            /*alert("Reprovado!");*/
+            x.innerHTML = "<h1> Aluno: " + nome + "</h1><h2> média: " + media + "<h3 style=color:red > Infelizmente você foi reprovado.</h3>";
+        }
+    </script>
+</body>
+
+</html>
