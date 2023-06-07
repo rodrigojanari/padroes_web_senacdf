@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01 - JavaScript</title>
+</head>
+
+<body>
+
+    <form action="calcula_media" method="get">
+        <fieldset>
+
+            <legend>Média semestral</legend>
+
+<label for=""></label><input type="text"><i></i><i></i><small></small>
+
+            <label for="id_name">Aluno:</label>
+            <input type="text" id="id_name" name="id_name" placeholder="Digite seu nome"><br><br>
+
+            <label for="id_n1">Nota 1:</label>
+            <input type="text" id="id_n1" name="id_n1" placeholder="Digite a nota do 1º bimestre"><br><br>
+
+            <label for="id_n2">Nota 2:</label>
+            <input type="text" id="id_n2" name="id_n2" placeholder="Digite a nota do 2º bimestre"><br><br>
+
+            <p>Média: <span id="id_media"></span></p>
+            <br><br>
+            Situação: 
+
+        </fieldset>
+
+        <input type="submit" value="Verificar situação"><br><br>
+    </form>
+
+    <script>
+
+        document.getElementById("id_media") = getElementById("id_n1") / getElementById("id_n2")
+
+
+        if (media >= 6) {
+            document.getElementById("id_situacao").innerHTML = "Aprovado";
+            document.getElementById("id_situacao").style.color = "blue"
+
+        } else {
+            document.getElementById("id_situacao").innerHTML = "Reprovado";
+            document.getElementById("id_situacao").style.color = "red";
+        }
+
+    </script>
+    <a href="index.html">Voltar</a>
+</body>
+
+</html>

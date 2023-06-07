@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01 - Média de notas</title>
+</head>
+
+<body>
+    <h1>Aluno: <span id="nome_aluno"> </span></h1>
+    <h2>Média: <span id="id_media"></span></h2>
+    <h3>Situação: <span id="id_situacao"></span></h3>
+
+    <script>
+        let nome = prompt("Qual o seu nome?");
+        let n1 = parseFloat(prompt("Insira a nota do primeiro bimestre:"));
+        let n2 = parseFloat(prompt("Insira a nota do segundo bimestre:"));
+        let media = (n1 + n2) / 2
+
+        document.getElementById("nome_aluno").innerHTML = nome;
+        document.getElementById("id_media").innerHTML = media;
+
+        if (media >= 6) {
+            document.getElementById("id_situacao").innerHTML= "Aprovado";
+            document.getElementById("id_situacao").style.color = "blue"
+    
+        } else {
+            document.getElementById("id_situacao").innerHTML = "Reprovado";
+            document.getElementById("id_situacao").style.color = "red";
+        }
+
+    </script>
+    <a href="index.html">Voltar</a>
+</body>
+
+</html>

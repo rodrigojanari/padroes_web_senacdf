@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03 - appendChild</title>
+</head>
+
+<body>
+    <h1>O método appendChild()</h1>
+
+    <ul id="myList">
+        <li>Café</li>
+        <li>Chá</li>
+    </ul>
+
+    <p>Informe um novo item e escolha uma cor:</p>
+
+    <input type="text" id="itemText" placeholder="Digite o novo item">
+
+    <label><input type="radio" name="color" value="red"> Vermelho</label>
+    <label><input type="radio" name="color" value="blue"> Azul</label>
+    <label><input type="radio" name="color" value="green"> Verde</label>
+
+    <button onclick="myFunction()">Incluir</button>
+
+    <script>
+        function myFunction() {
+            // Obtém o texto digitado no input e guarda na variável
+            const itemText = document.getElementById("itemText").value;
+
+            // Cria um novo item na lista
+            const node = document.createElement("li");
+
+            // Cria um nó com o texto digitado e armazenado na variável itemText:
+            const textnode = document.createTextNode(itemText);
+
+            // Inclui o texto digitado no nó "li"
+            node.appendChild(textnode);
+
+            // Obtém a cor selecionada
+            const selectedColor = document.querySelector('input[name="color"]:checked').value;
+
+            // Muda a cor do nó criado
+            node.style.color = selectedColor;
+
+            // Inclui o item na lista
+            document.getElementById("myList").appendChild(node);
+        }
+    </script>
+</body>
+
+</html>

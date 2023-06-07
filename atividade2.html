@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02 - IMC</title>
+</head>
+
+<body>
+    <h1>Nome: <span id="id_nome"> </span></h1>
+    <h2>IMC: <span id="id_imc"></span></h2>
+    <h3>Situação: <span id="id_situacao"></span></h3>
+   
+    <script>
+        let nome = prompt("Qual o seu nome?");
+        let peso = parseFloat(prompt("Insira seu peso:"));
+        let altura = parseFloat(prompt("Insira sua altura:"));
+        let imc_calculado = (peso / (altura * altura));
+
+        document.getElementById("id_nome").innerHTML = nome;
+        document.getElementById("id_imc").innerHTML = imc_calculado;
+
+        if (imc_calculado < 17 || imc_calculado > 30) {
+            document.getElementById("id_situacao").innerHTML = "Perigo"
+            document.getElementById("id_situacao").style.color = "red";
+
+        } else {
+            if ((imc_calculado >= 17 && imc_calculado < 18.49) || (imc_calculado >= 25 && imc_calculado < 30)) {
+                document.getElementById("id_situacao").innerHTML = "Alerta"
+                document.getElementById("id_situacao").style.color = "orange";
+            } else {
+                if (imc_calculado >= 18.50 && imc_calculado < 25) {
+                    document.getElementById("id_situacao").innerHTML = "Normalidade"
+                    document.getElementById("id_situacao").style.color = "green";
+
+                }
+            }
+        }
+    </script>
+
+    <a href="index.html">Voltar</a>
+</body>
+
+</html>
