@@ -11,8 +11,3 @@ Curso Ciência de Dados:
 
 Rodrigo Janari Pinto - CD
 >>>>>>> ac74f7c93990bd5ccb54161abccefc3dc86a5035
-
-Curso Análise e Desenvolvimento de Sistemas
- Emerson de Souza Dantas
- Micaela Firmino da Silva
- Thiago Alves de Medeiros Souza

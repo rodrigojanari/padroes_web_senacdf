@@ -5,49 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade 01 - JavaScript</title>
+    <title>Atividade 01 - Média de notas</title>
 </head>
 
 <body>
 
-    <form action="calcula_media" method="get">
-        <fieldset>
+    <h1>Calcula média</h1>
+    <form id="form-notas">
+        <FIELdset>
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" required placeholder="Digite a primeira nota"><br><br>
 
-            <legend>Média semestral</legend>
-
-<label for=""></label><input type="text"><i></i><i></i><small></small>
-
-            <label for="id_name">Aluno:</label>
-            <input type="text" id="id_name" name="id_name" placeholder="Digite seu nome"><br><br>
-
-            <label for="id_n1">Nota 1:</label>
-            <input type="text" id="id_n1" name="id_n1" placeholder="Digite a nota do 1º bimestre"><br><br>
-
-            <label for="id_n2">Nota 2:</label>
-            <input type="text" id="id_n2" name="id_n2" placeholder="Digite a nota do 2º bimestre"><br><br>
-
-            <p>Média: <span id="id_media"></span></p>
-            <br><br>
-            Situação: 
-
-        </fieldset>
-
-        <input type="submit" value="Verificar situação"><br><br>
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" required placeholder="Digite a segunda nota"><br>
+        </FIELdset>
+        <BR>
+        <button type="submit">Calcular média</button>
     </form>
 
+    <p>Média: <span id="id_media"></span></p>
+    <p>Situação: <span id="id_situacao"></span></p>
+
     <script>
+        document.getElementById("form-notas").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        document.getElementById("id_media") = getElementById("id_n1") / getElementById("id_n2")
+            let n1 = parseFloat(document.getElementById("nota1").value);
+            let n2 = parseFloat(document.getElementById("nota2").value);
+            let media = (n1 + n2) / 2;
 
+            document.getElementById("id_media").innerHTML = media;
 
-        if (media >= 6) {
-            document.getElementById("id_situacao").innerHTML = "Aprovado";
-            document.getElementById("id_situacao").style.color = "blue"
-
-        } else {
-            document.getElementById("id_situacao").innerHTML = "Reprovado";
-            document.getElementById("id_situacao").style.color = "red";
-        }
+            if (media >= 6) {
+                document.getElementById("id_situacao").innerHTML = "Aprovado";
+                document.getElementById("id_situacao").style.color = "blue";
+            } else {
+                document.getElementById("id_situacao").innerHTML = "Reprovado";
+                document.getElementById("id_situacao").style.color = "red";
+            }
+        });
 
     </script>
     <a href="index.html">Voltar</a>
